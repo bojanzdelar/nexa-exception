@@ -10,10 +10,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.nexa</groupId>
-    <artifactId>exception</artifactId>
+    <artifactId>nexa-exception</artifactId>
     <version>1.0.0</version>
-    <name>exception</name>
-    <description>Nexa exception service</description>
+    <name>Nexa Exception</name>
+    <description>Shared exception handling library for Nexa microservices</description>
     <packaging>jar</packaging>
     <properties>
         <maven.compiler.release>25</maven.compiler.release>
