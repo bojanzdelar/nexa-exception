@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.nexa</groupId>
     <artifactId>nexa-exception</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>Nexa Exception</name>
     <description>Shared exception handling library for Nexa microservices</description>
     <packaging>jar</packaging>
@@ -30,6 +30,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

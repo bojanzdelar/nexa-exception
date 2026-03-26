@@ -10,6 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authorization.AuthorizationDeniedException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -39,6 +42,18 @@ public class RestExceptionHandler {
         .body(
             new ApiError(
                 "Validation failed", HttpStatus.BAD_REQUEST.value(), Instant.now(), errors));
+  }
+
+  @ExceptionHandler(AuthenticationException.class)
+  public ResponseEntity<ApiError> handleAuth(AuthenticationException ex) {
+    return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+            .body(new ApiError("Unauthorized", 401, Instant.now(), null));
+  }
+
+  @ExceptionHandler({AccessDeniedException.class, AuthorizationDeniedException.class})
+  public ResponseEntity<ApiError> handleForbidden(Exception ex) {
+    return ResponseEntity.status(HttpStatus.FORBIDDEN)
+            .body(new ApiError("Access denied", 403, Instant.now(), null));
   }
 
   @ExceptionHandler(Exception.class)
