@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.nexa</groupId>
     <artifactId>nexa-exception</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <name>Nexa Exception</name>
     <description>Shared exception handling library for Nexa microservices</description>
     <packaging>jar</packaging>
