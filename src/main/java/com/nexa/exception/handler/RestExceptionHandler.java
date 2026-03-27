@@ -16,6 +16,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 @RestControllerAdvice
 public class RestExceptionHandler {
@@ -53,6 +54,12 @@ public class RestExceptionHandler {
   public ResponseEntity<ApiError> handleForbidden(Exception ex) {
     return ResponseEntity.status(HttpStatus.FORBIDDEN)
             .body(new ApiError("Access denied", 403, Instant.now(), null));
+  }
+
+  @ExceptionHandler(NoResourceFoundException.class)
+  public ResponseEntity<ApiError> handleNotFound(NoResourceFoundException ex) {
+    return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body(new ApiError("Endpoint not found", 404, Instant.now(), null));
   }
 
   @ExceptionHandler(Exception.class)
