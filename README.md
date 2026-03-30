@@ -1,6 +1,6 @@
 # Nexa Exception
 
-Shared exception handling library for Spring Boot RESTful microservices.
+Shared exception handling library for Nexa Spring Boot RESTful microservices.
 
 ## Overview
 
@@ -24,9 +24,9 @@ Add the dependency (use the latest available version):
 
 ```xml
 <dependency>
-  <groupId>com.nexa</groupId>
+  <groupId>com.zdelar.nexa</groupId>
   <artifactId>exception</artifactId>
-  <version>1.1.3</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 

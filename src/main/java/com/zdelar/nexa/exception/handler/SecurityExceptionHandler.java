@@ -1,6 +1,6 @@
-package com.nexa.exception.handler;
+package com.zdelar.nexa.exception.handler;
 
-import com.nexa.exception.api.ApiError;
+import com.zdelar.nexa.exception.api.ApiError;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

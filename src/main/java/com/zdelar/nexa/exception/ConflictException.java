@@ -1,4 +1,4 @@
-package com.nexa.exception;
+package com.zdelar.nexa.exception;
 
 import org.springframework.http.HttpStatus;
 

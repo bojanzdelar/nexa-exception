@@ -1,4 +1,4 @@
-package com.nexa.exception.api;
+package com.zdelar.nexa.exception.api;
 
 import java.time.Instant;
 import java.util.Map;

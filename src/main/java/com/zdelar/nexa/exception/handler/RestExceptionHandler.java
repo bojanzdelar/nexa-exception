@@ -1,11 +1,11 @@
-package com.nexa.exception.handler;
+package com.zdelar.nexa.exception.handler;
 
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.nexa.exception.ApiException;
-import com.nexa.exception.api.ApiError;
+import com.zdelar.nexa.exception.ApiException;
+import com.zdelar.nexa.exception.api.ApiError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

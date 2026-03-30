@@ -1,1 +1,1 @@
-com.nexa.exception.config.ExceptionAutoConfiguration
+config.com.zdelar.nexa.exception.ExceptionAutoConfiguration
