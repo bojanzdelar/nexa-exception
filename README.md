@@ -15,7 +15,7 @@ Add the dependency (use the latest available version):
 <dependency>
   <groupId>com.zdelar.nexa</groupId>
   <artifactId>exception</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
 </dependency>
 ```
 
