@@ -9,24 +9,13 @@ It includes base exception classes, a global exception handler, and standardized
 
 ## Installation
 
-Add the GitHub Packages repository:
-
-```xml
-<repositories>
-  <repository>
-    <id>github</id>
-    <url>https://maven.pkg.github.com/bojanzdelar/nexa-exception</url>
-  </repository>
-</repositories>
-```
-
 Add the dependency (use the latest available version):
 
 ```xml
 <dependency>
   <groupId>com.zdelar.nexa</groupId>
   <artifactId>exception</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
