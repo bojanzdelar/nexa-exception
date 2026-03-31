@@ -12,10 +12,11 @@ It includes base exception classes, a global exception handler, and standardized
 Add the dependency (use the latest available version):
 
 ```xml
+
 <dependency>
-  <groupId>com.zdelar.nexa</groupId>
-  <artifactId>exception</artifactId>
-  <version>1.0.2</version>
+    <groupId>com.zdelar.nexa</groupId>
+    <artifactId>exception</artifactId>
+    <version>1.1.0</version>
 </dependency>
 ```
 
