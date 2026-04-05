@@ -1,5 +1,6 @@
 package com.zdelar.nexa.exception.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zdelar.nexa.exception.handler.ApiAccessDeniedHandler;
 import com.zdelar.nexa.exception.handler.ApiAuthenticationEntryPoint;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
@@ -16,8 +17,20 @@ public class SecurityExceptionAutoConfiguration {
 
   @Bean
   @ConditionalOnMissingBean
-  public Customizer<ExceptionHandlingConfigurer<HttpSecurity>> securityExceptionConfigurer(
+  public Customizer<ExceptionHandlingConfigurer<HttpSecurity>> exceptionHandlingCustomizer(
       ApiAuthenticationEntryPoint entryPoint, ApiAccessDeniedHandler accessDeniedHandler) {
     return ex -> ex.authenticationEntryPoint(entryPoint).accessDeniedHandler(accessDeniedHandler);
+  }
+
+  @Bean
+  @ConditionalOnMissingBean
+  public ApiAuthenticationEntryPoint apiAuthenticationEntryPoint(ObjectMapper objectMapper) {
+    return new ApiAuthenticationEntryPoint(objectMapper);
+  }
+
+  @Bean
+  @ConditionalOnMissingBean
+  public ApiAccessDeniedHandler apiAccessDeniedHandler(ObjectMapper objectMapper) {
+    return new ApiAccessDeniedHandler(objectMapper);
   }
 }

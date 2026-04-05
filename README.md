@@ -16,7 +16,7 @@ Add the dependency (use the latest available version):
 <dependency>
     <groupId>com.zdelar.nexa</groupId>
     <artifactId>nexa-exception</artifactId>
-    <version>1.1.3</version>
+    <version>1.1.4</version>
 </dependency>
 ```
 
@@ -26,7 +26,7 @@ Spring Security errors are not handled automatically. To return consistent error
 customizer in your security config:
 
 ```java
-http.exceptionHandling(securityExceptionConfigurer);
+http.exceptionHandling(exceptionHandlingCustomizer);
 ```
 
 ## License
