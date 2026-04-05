@@ -1,14 +1,16 @@
 package com.zdelar.nexa.exception.config;
 
 import com.zdelar.nexa.exception.handler.RestExceptionHandler;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@AutoConfiguration
 public class ExceptionAutoConfiguration {
 
-    @Bean
-    public RestExceptionHandler restExceptionHandler() {
-        return new RestExceptionHandler();
-    }
+  @Bean
+  @ConditionalOnMissingBean
+  public RestExceptionHandler restExceptionHandler() {
+    return new RestExceptionHandler();
+  }
 }

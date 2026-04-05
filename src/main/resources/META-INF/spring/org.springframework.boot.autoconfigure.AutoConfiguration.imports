@@ -1,1 +1,2 @@
 com.zdelar.nexa.exception.config.ExceptionAutoConfiguration
+com.zdelar.nexa.exception.config.SecurityExceptionAutoConfiguration
